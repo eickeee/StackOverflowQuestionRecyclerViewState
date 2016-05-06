@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.eicke.question.dummy.DummyContent.DummyItem;
+import com.eicke.question.DummyContent.DummyItem;
 
 import java.util.List;
 

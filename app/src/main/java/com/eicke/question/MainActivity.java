@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity
 
 
         /**
-         * If I programmatically select the first item to set an default item behavior,
-         * the list state is not going to be recovered after an orientation change.
+         * If I programmatically select the first item of the NavigationView so that the user will
+         * see an initial fragment, the list state of the RecyclerView is not going to be recovered after an orientation change.
          *
          * If I comment the following line and manually select the first item,
          * the list state is preserved in spite of an orientation change.
