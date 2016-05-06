@@ -28,14 +28,11 @@ public class MainActivity extends AppCompatActivity
         if (navigationView != null) navigationView.setNavigationItemSelectedListener(this);
 
 
-        /**
-         * If I programmatically select the first item of the NavigationView so that the user will
-         * see an initial fragment, the list state of the RecyclerView is not going to be recovered after an orientation change.
-         *
-         * If I comment the following line and manually select the first item,
-         * the list state is preserved in spite of an orientation change.
-         */
-        onNavigationItemSelected(navigationView.getMenu().findItem(R.id.nav_item));
+        if (savedInstanceState == null) {
+            final MenuItem firstMenuItem = navigationView.getMenu().findItem(R.id.nav_item);
+            onNavigationItemSelected(firstMenuItem);
+            firstMenuItem.setChecked(true);
+        }
     }
 
     @Override
